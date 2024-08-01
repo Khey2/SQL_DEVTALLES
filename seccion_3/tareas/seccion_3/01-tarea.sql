@@ -15,7 +15,7 @@ select * from users where name like 'Jim%';
 
 -- 4. Todos los registros cuyo segundo nombre es Alexander
 
-select * from users where name like '%Alexander';
+select * from users where name like '% Alexander';
 
 -- 5. Cambiar el nombre del registro con id = 1, por tu nombre Ej:'Fernando Herrera'
 
@@ -28,6 +28,7 @@ SET
 
 -- SELECT MAX(id) FROM users retorna el valor del MAXIMO id presente en la tabla users, ese valor
 -- se usa en el delete
+--SUBQUERY se le llama a usar un select interno 
 
 DELETE FROM users
 where id = (SELECT MAX(id) FROM users);
