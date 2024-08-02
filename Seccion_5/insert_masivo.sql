@@ -1,0 +1,7 @@
+-- SELECT DISTINCT CONTINENT FROM COUNTRY order by CONTINENT ASC;
+
+--! INSERTAR de forma masiva
+ INSERT INTO continent (name)
+SELECT DISTINCT continent FROM country;
+
+-- SELECT * FROM CONTINENT

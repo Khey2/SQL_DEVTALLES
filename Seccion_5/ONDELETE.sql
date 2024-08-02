@@ -19,6 +19,5 @@
     borraras todos los registros de estas tablas doinde 
     habia relacion...
 
-
-    
 */
+
