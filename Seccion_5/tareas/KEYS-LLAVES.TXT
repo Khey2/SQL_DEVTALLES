@@ -1,0 +1,77 @@
+Para que una relacion sea posible en las BASES DE DATOS
+se usan llaves ( PRIMARYAS, FORANEAS )
+
+aunque, tambien es posible no usarlas  y manualmente 
+indicar IDS ( no recomendado )
+
+
+--! DESVENTAJAS
+
+- no mantienes una integridad referencial, si borras algo, 
+ perderias la relacion
+y el regsitro quedara sin la relacion... sera un registro huerfano
+
+
+algunos tipos de: KEYS - llaves
+
+1.- Primary Key ( identificar de manera unica X registro )
+
+2.- Super Key
+
+    la SUPER KEY es un CONJUNTO de atributos que identifican
+    a un registrod e manera unica ( unir varios campos )
+
+        ejemplo: unir la primary key de una tabla + una candidate key para formas una SUPER key
+        ( ambos atributos identificaran de manera unica X tabla )
+
+
+        employee primary key (id) + full_name
+
+
+
+3.- Candidate Key ( conjunto de atributos que identifican de forma unica X registro  )
+
+    - osea es unir 3 campos por ejemplo para crear una candidate key 
+    ( excluye la llave primaria ).
+
+    RESUMEN: las claves candidate son claves ALTERNATIVAS a la primary key
+    que pueden servir como primary key, esto se hace para añadir FLEXIBILIDAD
+    a x Tabla, ya que, te permite generar INNERJOINS y relaciones usando algun atributo
+    de la tabla que sea una candidate key, y como estos campos son unicos, sirve
+    de igual manera como primary key, aunque, en principio, una primary key
+    sera suficiente
+
+4.- Foreign Key 
+
+    - ( relacion a una primary key unica de X registro de otra tabla )
+
+    apuntan a la primary key de otra tabla ( o a una candidate key )
+
+5.-  Composite Key
+
+    Es cuando una llabv primaria se forma por MAS de 1 atributo, osea,
+    ES usar 3 ATRIBUTOS para formar una primary key
+
+
+¿Diferencias entre una SUPER KEY y una COMPOSITE KEY?
+
+R: el enfoque...
+
+    SUPERCLAVE: es un conjunto de atributos ( columnas ) que TOMADOS
+    INDIVIDUALMENTE O EN COMBINACION permiten identificar de manera unica
+    un registro.
+
+    por lo tanto, una SUPERCLAVE es un subconjunto de las claves candidatas
+
+    COMPOSITE: es un conjunto de atributos ( columnas ) que TOMADOS EN CONJUNTO  te 
+    permiten identificar un registro unico en una tabla
+
+    clave compuesta es un conjunto de claves candidatas que identifican
+     a X registro
+
+     La principal diferencia entre una superclave y una clave compuesta 
+     radica en el número de atributos que conforman la clave.
+
+Una superclave puede ser formada por uno o más atributos, 
+mientras que una clave compuesta debe contener al menos dos atributos 
+para cumplir con su propósito.

@@ -1,0 +1,40 @@
+
+TIPOS DE RELACIONES
+
+
+¿Que es una relacion?
+
+R: relacionar 1 registro a otros / varios registro/s
+de otra tabla!
+
+TIPOS DE RELACIONES:
+
+    - one to one ( 1:1)
+    - one to many ( 1:n )
+    - self joining ( relaciones a si mismas )
+    - muchos a muchos ( n:n )
+
+el id de ( PRIMARY KEY) de la tabla A se relaciona a 1 registro de TABLA B
+, TABLA B tendra una columna con un CONSTRAINT llamado foreign key
+,y esta columna solo aceptara valores de IDS existentes en la TABLA A 
+( uniendolos ).
+
+
+RELACIONES A SI MISMA ( SELF JOINING) 
+
+cuando una TABLA de usuarios, puedes agregar una columna para indicar que usuario
+esta actualizando dicho registro.
+
+
+MUCHOS A MUCHOS
+
+
+ejemplo: MUCHOS ESTUDIANTES ( Tabla A ) tienen MUCHAS clases ( Tabla B )
+a su vez MUCHAS clases tienen MUCHOS ESTUDIANTES
+
+( n: n )
+
+para este tipo de relacion se usa una tabla pivote ( intermedia ) que junta los IDS
+UNICOS DE AMBAS TABLAS.
+
+
